@@ -13,15 +13,15 @@ We came up with an Azure Automation Runbook that will take snapshots of your dis
 
 # Usage
 
-1. Azure Automation
+1. **Azure Automation**
 
 Create a new Azure Automation account or use an existing one.
 
-2. Runbook
+2. **Runbook**
 
 Create a new runbook by importing the runbook.ps1 file of this git repository. Runbook type will be "PowerShell".
 
-3. Azure Disks
+3. **Azure Disks**
 
 Add a new tag to the Azure Disks you want to backup:
 - Name: snapshot
@@ -29,7 +29,7 @@ Add a new tag to the Azure Disks you want to backup:
 
 By adding this tag, you indicate the runbook that you want this disk to be part of your backups.
 
-4. Schedule runbook
+4. **Schedule runbook**
 
 You can now schedule your runbook, to run for example on a daily basis.
 You will have to provide two parameters:
@@ -44,3 +44,6 @@ You can schedule the workbook twice to perform Daily backups and also Monthly ba
 - **Monthly Backups**: First day of every month with retention time = 365 days
 
 This config will allow you to have a backup of the last 40 days (1 backup per day) as well as a backup of the last 12 month (1 backup per month).
+
+## Update Azure Modules
+It might be required that you "update Azure modules". To do so, simply go in the "modules" section of your Azure Automation account and click "Update Azure Modules" to get the latest version of the modules.
